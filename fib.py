@@ -17,7 +17,7 @@ def fib(n):
     return fib(n-1) + fib(n-2)
 
 
-number = int(input("please end number: "))
+# number = int(input("please end number: "))
 
-for n in range(number):
-    print(f"{n}: {fib(n)}")
+# for n in range(number):
+#     print(f"{n}: {fib(n)}")
