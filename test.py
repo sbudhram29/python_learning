@@ -1,6 +1,6 @@
 import unittest
 
-import fib
+from fib import fib
 
 
 class FibTests(unittest.TestCase):
@@ -14,7 +14,7 @@ class FibTests(unittest.TestCase):
         assert fib(1) == 1
 
     def test_fib_10_is_89(self):
-        assert self.fib(10) == 89
+        assert fib(10) == 55
 
 
 """
