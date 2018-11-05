@@ -14,7 +14,7 @@ len(list)
 concat = list1 + list2
 ```
 
-### split
+### strings
 
 ```
 "".split()
@@ -23,4 +23,15 @@ concat = list1 + list2
 quote = "the greatest teacher failure is"
 
 words = quote.split()
+```
+
+### classes
+
+```
+**kwargs = dict of keyword args
+**args = list of args
+setattr(self,key, value)
+getattr(self, key)
+
+super() to override __init__
 ```
