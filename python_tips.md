@@ -34,4 +34,25 @@ setattr(self,key, value)
 getattr(self, key)
 
 super() to override __init__
+
+issubclass(subclass, class)
+isinstance(class, parentClass)
+__class__
+
+magic methods
+do this mostly on the base classes
+
+__str__ = return string of object
+__int__
+__init__
+__repr__
+
+
+__new__
+
+class ReversedStr(str):
+    def __new__(*args, **kwargs):
+        self = str.__new__(*args, **kwargs)
+        self = self[::-1]
+        return self
 ```
