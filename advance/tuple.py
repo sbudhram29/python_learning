@@ -35,3 +35,20 @@ def combo(*args):
 
 
 print(combo([1, 2, 3], 'abc'))
+
+
+numbers = [1, 2, 3, 4, 5]
+
+
+def add(num1, num2):
+    return num1+num2
+
+
+def subtract(num1, num2):
+    return num1-num2
+
+
+def math(num1, num2):
+    up = add(5 + 7, 7 + 9)
+    down = subtract(6, 3)
+    return add(up, down)
