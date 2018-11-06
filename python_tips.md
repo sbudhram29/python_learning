@@ -56,3 +56,18 @@ class ReversedStr(str):
         self = self[::-1]
         return self
 ```
+
+#### Set
+
+```
+union |
+intersection &
+
+difference -
+symmetric_difference ^
+
+update
+add
+disgard
+remove
+```
