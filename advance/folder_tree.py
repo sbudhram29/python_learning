@@ -21,10 +21,10 @@ for uri in arr:
 def printTree(routes, delimeter):
     delimeter = ' ' + delimeter
 
-    for route in routes:
-        print(delimeter + route)
-        if type(routes[route]) == dict:
-            printTree(routes[route], delimeter)
+    for key, route in routes.items():
+        print(delimeter + key)
+        if type(route) == dict:
+            printTree(route, delimeter)
 
 
 printTree(routes, '-')
