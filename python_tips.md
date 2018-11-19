@@ -71,3 +71,8 @@ add
 disgard
 remove
 ```
+
+#### Shallow vs Deep Copies
+
+Shallow copy keep reference if other list, dict, tuple are in the list, dict, tuple (childred object)
+Deep create a independent copy
