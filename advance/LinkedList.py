@@ -46,8 +46,8 @@ class LinkedList:
             self.head = current.next
             return None
 
-        while(current.next != None):
-            if current.data == current.next.data:
+        while current.next != None:
+            if data == current.next.data:
                 current.next = current.next.next
                 return None
             current = current.next
@@ -55,10 +55,7 @@ class LinkedList:
 
 node_list = LinkedList(1)
 node_list.add(2)
-node_list.add(2)
-node_list.add(2)
-node_list.add(2)
-node_list.add(2)
+
 print(node_list.size())
 node_list.delete(2)
 print(node_list.size())
