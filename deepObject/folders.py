@@ -12,15 +12,16 @@ list_of_routes = {}
 for route in routes:
     current = list_of_routes
     for r in route.split('/'):
-        if r not in current:
+        if r in current:
+            current = current[r]
+        else:
             current[r] = {}
-        current = current[r]
 
 
 def printRoutes(routes, delimeter):
     for k, v in routes.items():
         print(delimeter + k)
-        if type(v) == dict:
+        if isinstance(v, dict):
             printRoutes(v, ' ' + delimeter)
 
 
