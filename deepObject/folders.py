@@ -5,6 +5,7 @@ routes = [
     'videos',
     'videos/genre',
     'videos/genre/kids',
+    'home/user/videos/games',
 ]
 
 list_of_routes = {}
@@ -12,10 +13,10 @@ list_of_routes = {}
 for route in routes:
     current = list_of_routes
     for r in route.split('/'):
-        if r in current:
-            current = current[r]
-        else:
-            current[r] = {}
+        # assign current[r] to current[r] or create new dict
+        current[r] = current.get(r, {})
+        # move current to current[r] for nesting
+        current = current[r]
 
 
 def printRoutes(routes, delimeter):
@@ -26,3 +27,4 @@ def printRoutes(routes, delimeter):
 
 
 printRoutes(list_of_routes, '-')
+print(list_of_routes['home']['user']['videos'].get('games'))
