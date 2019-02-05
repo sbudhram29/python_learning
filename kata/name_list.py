@@ -19,11 +19,11 @@ def namelist(names):
     # add a & for the last name
 
 
-print(namelist([{'name': 'Bart'}, {'name': 'Lisa'}, {'name': 'Maggie'}]))
-# returns 'Bart, Lisa & Maggie'
+# print(namelist([{'name': 'Bart'}, {'name': 'Lisa'}, {'name': 'Maggie'}]))
+# # returns 'Bart, Lisa & Maggie'
 
-print(namelist([{'name': 'Bart'}, {'name': 'Lisa'}]))
-# returns 'Bart & Lisa'
+# print(namelist([{'name': 'Bart'}, {'name': 'Lisa'}]))
+# # returns 'Bart & Lisa'
 
-print(namelist([{'name': 'Bart'}]))
-# returns 'Bart'
+# print(namelist([{'name': 'Bart'}]))
+# # returns 'Bart'
