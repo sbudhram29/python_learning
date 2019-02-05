@@ -11,7 +11,7 @@ def sum_of_k(list_of_numbers, k):
     return False
 
 
-nums = [10, 15, 3, 7]
-k = 17
+# nums = [10, 15, 3, 7]
+# k = 17
 
-print(sum_of_k(nums, k))
+# print(sum_of_k(nums, k))
