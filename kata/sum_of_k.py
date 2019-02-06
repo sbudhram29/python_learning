@@ -1,10 +1,10 @@
-def sum_of_k(list_of_numbers, k):
+def sum_of_k(list_of_numbers: list, k: int) -> bool:
     '''
     determine if two int in list can be
     added to sum up to k
     '''
+    seen: list = []
 
-    seen = []
     for n in list_of_numbers:
         needed = k - n
         if (needed in seen or needed == 0):
