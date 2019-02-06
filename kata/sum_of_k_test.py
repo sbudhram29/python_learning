@@ -9,6 +9,7 @@ class kSum_test(unittest.TestCase):
         self.assertEqual(kSum.sum_of_k([10, 1, 2, 3, 4, 9], 19), True)
         self.assertEqual(kSum.sum_of_k([10, 1, 2, 3, 4, 9], 99), False)
         self.assertEqual(kSum.sum_of_k([10, 1, 2, 3, 4, 9], 14), True)
+        self.assertEqual(kSum.sum_of_k([10, 1, 2, 3, 4, 9], 13), True)
         self.assertEqual(kSum.sum_of_k([10, 1, 2, 3, 4, 9], 6), True)
 
 
