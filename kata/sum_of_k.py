@@ -5,10 +5,10 @@ def sum_of_k(list_of_numbers: list, k: int) -> bool:
     '''
     seen: list = []
 
-    for n in list_of_numbers:
-        needed = k - n
+    for num in list_of_numbers:
+        needed = k - num
         if (needed in seen or needed == 0):
             return True
-        seen.append(n)
+        seen.append(num)
 
     return False
