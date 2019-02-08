@@ -30,7 +30,7 @@ def print_routes(rts, sep):
     for rt in rts:
         print(sep + rt)
 
-        if type(rts[rt]) == dict:
+        if type(rts[rt]) is dict:
             print_routes(rts[rt], ' ' + sep)
 
 

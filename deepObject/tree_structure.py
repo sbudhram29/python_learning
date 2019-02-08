@@ -21,16 +21,14 @@ for folder in folders:
     current = tree_struct
 
     for branch in folderArr:
-        if branch not in current:
-            current[branch] = {}
-
-        current = current[branch]
+        current[branch], current = current.get(
+            branch, {}), current.get(branch, current)
 
 
 def printRoutes(routes, delimeter):
     for k, v in routes.items():
         print(delimeter + k)
-        if type(v) == dict:
+        if type(v) is dict:
             printRoutes(v, ' ' + delimeter)
 
 
