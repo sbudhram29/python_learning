@@ -16,3 +16,4 @@ carlisle = Company('Carlisle', 1, 'acsdbase')
 
 
 print(carlisle.name)
+print(carlisle.id)
