@@ -11,20 +11,20 @@ routes = {}
 
 for uri in arr:
     current = routes
-    for segs in uri.split('/'):
-        if segs in current:
-            current = current[segs]
+    for seg in uri.split('/'):
+        if seg in current:
+            current = current[seg]
         else:
-            current[segs] = {}
+            current[seg] = {}
 
 
-def printTree(routes, delimeter):
-    delimeter = ' ' + delimeter
+def print_tree(routes_dict, delimiter):
+    delimiter = ' ' + delimiter
 
-    for key, route in routes.items():
-        print(delimeter + key)
-        if type(route) == dict:
-            printTree(route, delimeter)
+    for key, route in routes_dict.items():
+        print(delimiter + ' ' + key)
+        if type(route) is dict:
+            print_tree(route, delimiter)
 
 
-printTree(routes, '-')
+print_tree(routes, '->')
