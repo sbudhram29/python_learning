@@ -2,22 +2,26 @@ memo = dict()
 
 
 def fib(n):
+
+    n = abs(n)
+
     if n in memo:
         return memo[n]
 
-    if n <= 0:
-        return 0
     if n <= 2:
-        return 1
-    f = fib(n - 1) + fib(n - 2)
+        f = 1
+    else:
+        f = fib(n - 1) + fib(n - 2)
+
     memo[n] = f
+
     return f
 
 
-for i in range(1, 101):
+for i in range(1, 10001):
     print(fib(i))
 
-print(memo)
+# print(memo)
 
 fib_memo = {}
 
@@ -33,5 +37,5 @@ def fib_for(num):
     return f
 
 
-for i in range(1, 101):
-    print(fib_for(i))
+# for i in range(1, 101):
+#     print(fib_for(i))
