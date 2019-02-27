@@ -16,7 +16,8 @@ def get_routes(uris):
         current = routes
 
         for seg in segs:
-            current[seg], current = current.get(seg, {}), current.get(seg)
+            current[seg] = current.get(seg, {})
+            current = current[seg]
 
     return routes
 
@@ -24,11 +25,11 @@ def get_routes(uris):
 print(get_routes(list_of_uri))
 
 
-def print_routes(routes, delimeter):
+def print_routes(routes, delimiter):
     for route in routes:
-        print(delimeter + route)
+        print(delimiter + route)
         if type(routes[route]) is dict:
-            print_routes(routes[route], ' ' + delimeter)
+            print_routes(routes[route], ' ' + delimiter)
 
 
 print_routes(get_routes(list_of_uri), '->')
