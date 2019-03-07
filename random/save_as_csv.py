@@ -5,7 +5,7 @@ import csv
 
 
 
-api_url_base = "https://api.carlisleny.com/v1/product/carlisle/k"
+api_url_base = "https://api.carlisleny.com/v1/product/etcetera/k"
 
 
 response = requests.get(api_url_base)
@@ -15,7 +15,7 @@ products = json.loads(response.content.decode('utf-8'))
 
 # open a file for writing
 
-product_data = open('./products.csv', 'w')
+product_data = open('./etcetera_products.csv', 'w')
 
 # create the csv writer object
 
@@ -27,7 +27,7 @@ def format_for_csv(product):
         product['style'],
         product['name'],
         product['category'],
-        product['price'],
+        round(float(product['price']), 2),
         get_size_range(product['size_scale']),
         get_config_size(product['sample_set_configs'], 'a'),
         get_config_size(product['sample_set_configs'], 'b'),
@@ -46,7 +46,7 @@ def get_size_range(sizes):
     elif len(sizes) == 1:
         return sizes.pop()
 
-    return f"{product['size_scale'][0]}-{product['size_scale'][-1]}"
+    return f"{sizes[0]}-{sizes[-1]}"
 
 
 def get_config_size(config, letter):
@@ -55,8 +55,15 @@ def get_config_size(config, letter):
         return config.get(letter)
 
 
-for product in products.values():
+# open current order
+with open('./random/etcetera.json') as f:
+    data = dict(json.load(f))
 
-      csvwriter.writerow(format_for_csv(product))
+headers = ['style','name', 'category', 'price', 'size_scale', 'A', 'B', 'C', 'D', 'E', 'F']
+csvwriter.writerow(headers)
+for style in data['style']:
+
+    if products.get(style):
+        csvwriter.writerow(format_for_csv(products[style]))
 
 product_data.close()
