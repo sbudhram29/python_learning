@@ -5,9 +5,18 @@ from fib import fib
 
 class FibTests(unittest.TestCase):
     def setUp(self):
-        self.fib10 = fib(10)
-        self.fib1 = fib(1)
-        self.fib0 = fib(0)
+        for f in fib(10):
+            self.fib10 = f
+
+        for f in fib(1):
+            self.fib1 = f
+
+        for f in fib(0):
+            self.fib0 = f
+
+        for f in fib(38):
+            self.fib38 = f
+
 
     def test_five_plus_five(self):
         assert 5 + 5 == 10
@@ -23,6 +32,9 @@ class FibTests(unittest.TestCase):
 
     def test_fib_0_is_0(self):
         assert self.fib0 == 0
+
+    def test_fib_38(self):
+        assert self.fib38 == 39088169
 
 
 """
