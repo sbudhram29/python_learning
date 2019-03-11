@@ -1,11 +1,12 @@
 import json
 import requests
-from pprint import pprint
 import csv
 
 
+company = input("Company? (carlisle or etcetera) -> ")
+season = input("Season? (ACS) -> ")
 
-api_url_base = "https://api.carlisleny.com/v1/product/etcetera/k"
+api_url_base = f"https://api.carlisleny.com/v1/product/{company}/{season}"
 
 
 response = requests.get(api_url_base)
@@ -15,7 +16,8 @@ products = json.loads(response.content.decode('utf-8'))
 
 # open a file for writing
 
-product_data = open('./etcetera_products.csv', 'w')
+file_name = f"./{company}_products.csv"
+product_data = open(file_name, 'w')
 
 # create the csv writer object
 
@@ -56,7 +58,8 @@ def get_config_size(config, letter):
 
 
 # open current order
-with open('./random/etcetera.json') as f:
+json_file = f"{company}.json"
+with open('./random/' + json_file) as f:
     data = dict(json.load(f))
 
 headers = ['style','name', 'category', 'price', 'size_scale', 'A', 'B', 'C', 'D', 'E', 'F']
@@ -65,5 +68,7 @@ for style in data['style']:
 
     if products.get(style):
         csvwriter.writerow(format_for_csv(products[style]))
+    else:
+        csvwriter.writerow([style, 'missing'])
 
 product_data.close()
