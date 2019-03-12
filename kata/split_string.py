@@ -1,6 +1,5 @@
 def solution(s):
     result = []
-    sub_string = ''
     for i in range(0, len(s), 2):
 
         sub_string = s[i:i+2]

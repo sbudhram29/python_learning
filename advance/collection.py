@@ -1,7 +1,7 @@
 from collections import Counter
 
 
-name = "SeanBudhramEricaBudhramLoganBudhramLandonBudhram"
+name = "SeanDoeEricaDoeLoganDoeLandonDoe"
 
 myCounter = Counter(name)
 
