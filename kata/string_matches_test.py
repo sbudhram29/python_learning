@@ -9,8 +9,11 @@ class string_matches_test(unittest.TestCase):
         self.assertEqual(match.find_longest('aaaa', 'aa'), 'aa')
         self.assertEqual(match.find_longest('AGGTAB', 'GCTXAYB'), 'GTAB')
         self.assertEqual(match.find_longest('seanbudhram', 'sxecadn'), 'sean')
-        self.assertEqual(match.find_longest('seanbudhram', 'seanbudhram'), 'seanbudhram')
-        self.assertEqual(match.find_longest('sbudhram', 'sbudhram'), 'sbudhram')
+        self.assertEqual(match.find_longest(
+            'seanbudhram', 'seanbudhram'), 'seanbudhram')
+        self.assertEqual(match.find_longest(
+            'sbudhram', 'sbudhram'), 'sbudhram')
+        self.assertEqual(match.find_longest('', 'ddd'), '')
 
 
 if __name__ == '__main__':
