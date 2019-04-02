@@ -2,6 +2,7 @@ arr = [
     'home',
     'home/user',
     'home/user/id',
+    'home/user/id/1',
     'videos',
     'videos/user',
     'videos/user/id'
@@ -16,6 +17,8 @@ for uri in arr:
             current = current[seg]
         else:
             current[seg] = {}
+
+print(routes)
 
 
 def print_tree(routes_dict, delimiter):
