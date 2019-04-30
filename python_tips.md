@@ -8,17 +8,27 @@ del list[0] remove from list[0]
 list.pop() remove from top of list
 list.pop(0) remove item at index 0
 
-list.copy()
+list.copy() #shallow copy
 len(list)
 
 concat = list1 + list2
 ```
 
-### strings
+### Dict
 
 ```
-"".split()
-"".join(',')
+dict['key']  # add to the dict
+del dict['key'] #delete element at key, key must exist
+
+dict.keys()
+dict.values()
+dict.items()
+
+```
+
+```
+"hello, world".split()
+"hello, world".join(',')
 
 quote = "the greatest teacher failure is"
 
@@ -30,10 +40,12 @@ words = quote.split()
 ```
 **kwargs = dict of keyword args
 **args = list of args
+
 setattr(self,key, value)
+
 getattr(self, key)
 
-super() to override __init__
+super() # call __init__ of parent class
 
 issubclass(subclass, class)
 isinstance(class, parentClass)
@@ -42,10 +54,10 @@ __class__
 magic methods
 do this mostly on the base classes
 
-__str__ = return string of object
-__int__
+__str__ #should return a user friendly representation of class
 __init__
-__repr__
+__repr__ #should return a programmer friendly representation of class
+__call__
 
 
 __new__
