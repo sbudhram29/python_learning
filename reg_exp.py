@@ -35,3 +35,7 @@ phone_match = r'[0-9]{3}\-[0-9]{3}\-[0-9]{4}'
 
 for p_number in re.findall(phone_match, numbers):
     print(p_number)
+
+for letter in "hello":
+    print(letter)
+
