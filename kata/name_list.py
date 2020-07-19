@@ -4,7 +4,7 @@ def namelist(names):
     if len(names) == 1:
         return names[0]['name']
 
-    # loop throught names and add to array
+    # loop through names and add to array
 
     arr = []
     for name in names:

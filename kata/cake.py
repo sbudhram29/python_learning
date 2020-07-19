@@ -1,16 +1,16 @@
 def cakes(recipe, available):
     completed = 0
     baking = True
-    recipe_ings = recipe.keys()
+    recipe_items = recipe.keys()
 
-    for ing in recipe_keys:
-        if not available.get(ing):
+    for item in recipe_keys:
+        if not available.get(item):
             return 0
 
     while baking:
-        for ing in recipe_ings:
-            available[ing] = available[ing] - recipe[ing]
-            if available[ing] <= 0:
+        for item in recipe_items:
+            available[item] = available[item] - recipe[item]
+            if available[item] <= 0:
                 baking = False
         if baking:
             completed += 1

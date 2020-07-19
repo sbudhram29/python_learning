@@ -1,4 +1,4 @@
-def jumpingOnclouds(c):
+def jumping_on_clouds(c):
 
     l = len(c)
 
@@ -13,5 +13,5 @@ def jumpingOnclouds(c):
     return jumps
 
 
-print(jumpingOnclouds([0, 0, 1, 0, 0, 1, 0]))
-print(jumpingOnclouds([0, 0, 0, 1, 0, 0]))
+print(jumping_on_clouds([0, 0, 1, 0, 0, 1, 0]))
+print(jumping_on_clouds([0, 0, 0, 1, 0, 0]))
