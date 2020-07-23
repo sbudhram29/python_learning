@@ -1,7 +1,7 @@
-def compute():
-    for i in range(10):
+def compute(start, end):
+    for i in range(start, end + 1):
         yield i
 
 
-for val in compute():
+for val in compute(4, 18):
     print(val)
