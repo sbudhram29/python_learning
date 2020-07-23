@@ -1,0 +1,5 @@
+ - DFS
+ - BFS
+ - Sliding Window
+ - Greedy Algo
+ - AVL Tree
