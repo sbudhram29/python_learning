@@ -5,9 +5,11 @@ def greedy(start_times, end_times):
 
     dict = []
 
-    for i, v in enumerate(start_list):
-        dict.append( (i + 1,v, end_list[i]))
+    for i, start in enumerate(start_list):
+        # save a tuple with i + 1, start and end time
+        dict.append( (i + 1,start, end_list[i]))
 
+    # sort activities by end time
     activities = sorted(dict, key=lambda x: int(x[2]))
 
     end = None
