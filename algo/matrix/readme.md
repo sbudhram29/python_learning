@@ -7,8 +7,22 @@ Get the Average of each level of a BST.
  
  return array of floats
 
+ walls 
 
- - find -2
- - run DFS from row, col of -2
- - check if_safe(M, row, col)
- - 
+ - create a visited Matrix
+ - iterate through the Matrix
+ - run DFS if equal to -2 
+ - turn visited[r][c] on
+ - test all 4 options
+ - turn visited[r][c] off
+
+ - DFS
+   - check if safe
+   - check if current depth is smallest
+   - run all dfs
+
+ - is_safe
+ 	- row > 0 
+ 	- col > 0
+ 	- row <= len(M)
+ 	- col <= len(M[0])
