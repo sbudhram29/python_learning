@@ -1,5 +1,4 @@
 from functools import reduce
-import timeit
 
 
 def list_mul(list_of_numbers):
@@ -23,7 +22,7 @@ def list_mul2(list_of_numbers):
 if __name__ == '__main__':
     import timeit
 
-    print(list_mul([1, 2, 3, 4, 5, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5]))
+    print(list_mul([1, 2, 3,]))
 
     print(timeit.timeit("list_mul([1, 2, 3, 4, 5, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5])",
                         setup="from __main__ import list_mul", number=100))

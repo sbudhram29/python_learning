@@ -3,7 +3,7 @@ def cakes(recipe, available):
     baking = True
     recipe_items = recipe.keys()
 
-    for item in recipe_keys:
+    for item in recipe_items:
         if not available.get(item):
             return 0
 
@@ -17,7 +17,5 @@ def cakes(recipe, available):
 
     return completed
 
-
-print([min(available[ing]/recipe[ing] if ing in available else 0 for ing in recipe)])
 
 print(cakes(recipe, available))

@@ -8,6 +8,7 @@ def find_lhs(nums):
     c = Counter(nums)
     res = []
 
+    print(c)
     for k in list(c):
         if k + 1 in c:
            res.append(c[k] + c[k +1])
